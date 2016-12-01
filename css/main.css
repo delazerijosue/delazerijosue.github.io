@@ -1,0 +1,323 @@
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	@import url(https://fonts.googleapis.com/css?family=Cousine:400,400italic,700,700italic);
+	@import url(https://fonts.googleapis.com/css?family=Oswald);
+	@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400italic,400,700italic,700);
+
+	html {
+		box-sizing: border-box;
+		font-family: 'Cousine', ;
+		font-size: 16px;
+
+		-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	body {
+		margin: 0px;
+		background: #161617;
+		line-height: 1.5;
+	}
+
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	main,
+	menu,
+	nav,
+	section,
+	summary {
+		display: block;
+	}
+
+	audio,
+	canvas,
+	progress,
+	video {
+		display: inline-block;
+		vertical-align: baseline;
+	}
+
+	audio:not([controls]) {
+		display: none;
+		height: 0;
+	}
+
+	[hidden],
+	template {
+		display: none;
+	}
+
+	abbr[title],
+	acronym {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+
+	b,
+	strong {
+		font-weight: bold;
+	}
+
+	dfn,
+	em,
+	i {
+		font-style: italic;
+	}
+
+
+	img {
+		border: 0;
+	}
+
+	figure {
+		margin: 0 0 1.5em 0;
+	}
+
+
+
+	optgroup {
+		font-weight: bold;
+	}
+
+	table {
+		border-spacing: 0;
+	}
+
+	td,
+	th {
+		padding: 0;
+	}
+
+	h4,
+	h5,
+	h6 {
+		clear: both;
+		margin: 0 0 24px 0;
+		color: #583333;
+		font-family: 'Cousine',;
+		font-weight: bold;
+		line-height: 30px;
+		line-height: 1.5rem;
+	}
+
+	h1 {
+		font-family: 'Oswald';
+		color: #B7B7B7;
+		letter-spacing: 10px;
+		line-height: 28px;
+		margin-top: 0px;
+		font-size: 22px;
+	}
+
+
+	.backline {
+		color: #000000;
+		padding: 1px 4px 0px 4px;
+		background-color: #B7B7B7;
+		text-transform: uppercase;
+	}
+
+	.of {
+		font-family: 'Noto Serif';
+		font-style: italic;
+		font-size: 12px;
+	}
+
+	.trabalhos {
+		margin-bottom: 70px;
+	}
+
+	h2 {
+		font-family: 'Cousine', !important;
+		font-weight: 100;
+		margin-top: 60px;
+		margin-bottom: 11px;
+		line-height: 15px;
+		text-align: left;
+		letter-spacing: 3px;
+		color: #B7B7B7;
+		font-size: 12px;
+	}
+		
+	@media only screen and (max-width: 600px) {
+		h2 {
+			line-height: 24px !important;
+			margin-right: 90px;
+			margin-bottom: 20px;
+		}
+	}
+
+	h3 {
+		font-family: 'Cousine', Courier;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 12px;
+		line-height: 24px;
+		font-weight: 100;
+		color: #B7B7B7;
+	}
+
+
+	h4 {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	h5 {
+		font-size: 12px;
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	h6 {
+		font-size: 12px;
+		font-size: 0.75rem;
+		font-weight: normal;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	/* Copy */
+
+	p {
+		margin: 0 0 1.5em;
+		color: #323234;
+		font-size: 18px;
+		letter-spacing: 1px;
+		font-family: 'Cousine' !important;
+		font-weight: 700;
+	}
+
+	p:before {
+    content: "➔";
+    font-family:Arial;
+    margin-left: -40px;
+    margin-right: 20px;
+ }
+
+
+ 
+
+	address {
+		margin: 0 0 1.5em;
+	}
+
+	big {
+		font-size: 18px;
+		font-size: 1.125rem;
+		line-height: 16px;
+		line-height: 1rem;
+	}
+
+	/* Links */
+
+	a {
+
+		font-family: 'Cousine';
+		font-size: 18px;
+		color: #323234;
+		background-color: transparent;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+
+ 	a:before {
+    content: "➔";
+    font-family:Arial;
+    margin-left: -40px;
+    margin-right: 20px;
+}
+
+	a:hover {
+		outline: none;
+		background-color: #B7B7B7;
+		color: #161617 !important;
+		padding: 1px 2px 2px 1px;
+	}
+
+	.site {
+		max-width: 1460px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 10%;
+		padding-left: 10%;
+	}
+
+	.wrap,
+	.site-content {
+		max-width: 100%;
+	}
+
+	.content-area {
+		width: 100%;
+	}
+
+	.site-header {
+		margin-bottom: 1.5em;
+		padding-bottom: 20vh;
+		padding-top: 30vh;
+		text-align: left;
+	}
+
+	.site-branding {
+		display: inline-block;
+		max-width: 960px;
+		line-height: 0;
+	}
+
+	a.site-logo-link {
+		display: inline-block;
+		height: 3em;
+		margin: 0.75em 0;
+	}
+
+	a.site-logo-link img {
+		display: inline-block;
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		max-height: 3em;
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	a.site-logo-link:before {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		content: '';
+	}
+
+	.site-title {
+		margin-bottom: 0;
+		padding: 1em 0;
+	}
+
+	.site-title a {
+		color: #585858;
+	}
+
+	.site-description {
+		margin-top: -24px;
+		margin-bottom: 1em;
+		padding-top: 0;
+		color: #bebebe;
+		font-size: 12px;
+		font-size: 0.75rem;
+		font-weight: normal;
+		line-height: 1.5;
+		letter-spacing: normal;
+		text-transform: none;
+	}
+
