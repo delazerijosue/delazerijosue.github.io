@@ -9,63 +9,19 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400italic,400,700italic,700);
 
 
-
-
 html {
 	box-sizing: border-box;
 	font-family: 'Cousine', ;
 	font-size: 16px;
 
 	-webkit-text-size-adjust: 100%;
-		-ms-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 }
 
 body {
-	background: #101e22;
+	background: hsl(193, 36%, 5%);
 	line-height: 1.5;
-	/* margin: 9%; */
-}
-
-
-h4,
-h5,
-h6 {
-	clear: both;
-	margin: 0 0 24px 0;
-	color: #583333;
-	font-family: 'Cousine',;
-	font-weight: bold;
-	line-height: 30px;
-	line-height: 1.5rem;
-}
-
-
-
-
-.about {
-	/* z-index: 0; */
-	width: 80px;
-	font-size: 12px;
-	padding-left: 100%;
-	/* float: right; */
-}
-
-
-.backline {
-	/* color: #B7B7B7; */
-	padding: 5px 5px 3px 5px;
-	/* background-color: #B7B7B7; */
-	text-transform: uppercase;
-	border-style: solid;
-	border-width: 0.5px;
-	border-color: hsla(0, 0%, 20%, 1);
-}
-
-.of {
-	font-family: 'Noto Serif';
-	font-style: italic;
-	font-size: 12px;
 }
 
 .post-title {
@@ -97,48 +53,68 @@ h6 {
 }
 
 .icons {
-	margin-top: 25vh;
+	margin-top: 15vh;
+	opacity: 0.3;
 }
 
 h1 {
 	font-family: 'Oswald';
 	font-weight: 300;
-	color: hsl(192, 30%, 48%);
+	color: hsl(192, 30%, 35%);
 	letter-spacing: 16px;
 	line-height: 64px;
 	margin-top: 0px;
 	font-size: 42px;
 }
 
-h2, h3 {
+h2 {
 	font-family: 'Cousine';
 	font-weight: 100;
 	margin-bottom: 6px;
 	line-height: 15px;
 	text-align: center;
 	letter-spacing: 2px;
-	color: hsl(192, 38%, 40%);
+	color: hsl(192, 30%, 25%);
 	font-size: 14px;
 	text-transform: uppercase;
 }
 
+h3 {
+	font-family: 'Cousine', Courier;
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 100;
+	color: hsl(192, 38%, 20%);
+}
+
+.description {
+	width: 440px;
+}
+
 @media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 36px;
+		line-height: 52px;
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+
 	h2 {
-		line-height: 34px !important;
+		font-family: 'Cousine';
+		line-height: 20px;
 		/* margin-right: 90px; */
+		padding-left: 50px;
+		padding-right: 50px;
 		margin-bottom: 20px;
+	}
+
+	h3{
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
-h3 {
-	font-family: 'Cousine', Courier;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 12px;
-	line-height: 24px;
-	font-weight: 100;
-	color: #B7B7B7;
-}
 
 
 h4 {
@@ -223,7 +199,7 @@ a:hover {
 .wrap,
 .site-content {
 	max-width: 100%;
-	margin-top: 10vw;
+	margin-top: 5vw;
 }
 
 .content-area {
@@ -232,8 +208,8 @@ a:hover {
 
 .site-header {
 	margin-bottom: 1.5em;
-	padding-bottom: 10vh;
-	padding-top: 142px;
+	padding-bottom: 12vh;
+	padding-top: 200px;
 	text-align: center;
 }
 
