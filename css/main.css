@@ -1,4 +1,5 @@
-*,
+
+	*,
 *:before,
 *:after {
 	/* box-sizing: inherit; */
@@ -21,7 +22,6 @@ html {
 
 body {
 	background: hsl(193, 36%, 5%);
-	line-height: 1.5;
 }
 
 .post-title {
@@ -59,12 +59,14 @@ body {
 
 h1 {
 	font-family: 'Oswald';
+	font-size: 42px;
 	font-weight: 300;
-	color: hsl(192, 30%, 35%);
 	letter-spacing: 16px;
 	line-height: 64px;
+	text-transform: uppercase;
+	color: hsl(192, 30%, 35%);
 	margin-top: 0px;
-	font-size: 42px;
+	margin-left: 15px;
 }
 
 h2 {
@@ -72,7 +74,6 @@ h2 {
 	font-weight: 100;
 	margin-bottom: 6px;
 	line-height: 15px;
-	text-align: center;
 	letter-spacing: 2px;
 	color: hsl(192, 30%, 25%);
 	font-size: 14px;
@@ -86,11 +87,13 @@ h3 {
 	line-height: 24px;
 	font-weight: 100;
 	color: hsl(192, 38%, 20%);
+	padding-left: 220px;
+	padding-right: 220px;
 }
 
-.description {
+/* .description {
 	width: 440px;
-}
+} */
 
 @media only screen and (max-width: 600px) {
 	h1 {
@@ -113,6 +116,7 @@ h3 {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+
 }
 
 
@@ -156,8 +160,8 @@ p {
 	color: hsl(192, 38%, 40%);
 	font-family: 'Cousine';
 	font-weight: 100;
-	font-size: 14px;
-	letter-spacing: 4px;
+	font-size: 12px;
+	letter-spacing: 2px;
 	float: left;
 	margin-top: 42px;
 	margin-left: 42px;
@@ -167,27 +171,39 @@ p {
 	color: hsl(192, 38%, 40%);
 	font-family: 'Cousine';
 	font-weight: 100;
-	font-size: 14px;
-	letter-spacing: 4px;
+	font-size: 12px;
+	letter-spacing: 2px;
 	float: right;
 	margin-top: 42px;
 	margin-right: 42px;
 }
 
+.col-group > div {
+  padding: 1em 1em 0;
+}
+
+@media screen and (min-width: 50em) {
+  .col-group {
+    overflow: hidden;
+  }
+  .col-group > div {
+    float: left;
+    width: 33.3333333%;
+  }
+}
 
 /* Links */
 
 a {
-	color: #323234;
 	background-color: transparent;
+	border-bottom: 1px solid currentColor;
 	text-decoration: none;
+	text-align: center;
 }
 
 a:hover {
 	outline: none;
-	background-color: hsl(192, 38%, 40%);;
-	color: hsl(192, 38%, 5%);
-	border-left: 10px;
+	border-bottom: 3px solid currentColor;
 }
 
 .site {
