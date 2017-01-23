@@ -134,6 +134,9 @@ h3 {
 		float: left;
 		margin-left: 0px;
 	}
+	.description{
+		max-width: 200px;
+	}
 
 	}
 
