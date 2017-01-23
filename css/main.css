@@ -8,11 +8,11 @@
 @import url(https://fonts.googleapis.com/css?family=Cousine:400,400italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400italic,400,700italic,700);
-
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 
 html {
 	box-sizing: border-box;
-	font-family: 'Cousine', ;
+	font-family: Helvetica, ;
 	font-size: 16px;
 
 	-webkit-text-size-adjust: 100%;
@@ -21,28 +21,25 @@ html {
 }
 
 body {
-	background: hsl(193, 36%, 5%);
+	background: hsl(200, 20%, 5%);
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
-.post-title {
-	font-family: 'Oswald';
+#post-title {
+	font-family: Helvetica;
 	text-transform: uppercase;
 	font-weight: 400;
-	color: #161617;
+	color: hsl(193, 36%, 5%);
 	letter-spacing: 2px;
 	font-size: 18px;
 	padding: 7px 7px 5px 7px;
-	background-color: hsla(0, 0%, 60%, 1);
+	margin-left: 1em;
+	margin-right: 1em;
+	background-color: hsl(192, 30%, 80%);
 	position: absolute;
-	margin-top: 520px;
-	margin-left: 80px;
 }
 
-.mid-img {
-	position: absolute;
-	margin-top: 80px;
-	margin-left: -420px;
-}
 
 .post-1 {
 	margin: 100px;
@@ -59,127 +56,105 @@ body {
 
 h1 {
 	font-family: 'Oswald';
-	font-size: 42px;
-	font-weight: 300;
-	letter-spacing: 16px;
-	line-height: 64px;
+	font-size: 20px;
+	font-weight: bold;
 	text-transform: uppercase;
-	color: hsl(192, 30%, 35%);
+	letter-spacing: 3px;
+	line-height: 28px;
+	color: hsl(200, 10%, 35%);
 	margin-top: 0px;
-	margin-left: 15px;
+	margin-left: 10%;
+	width: 200px;
+	float: left;
 }
 
-h2 {
-	font-family: 'Cousine';
+.work-exp {
 	font-weight: 100;
-	margin-bottom: 6px;
-	line-height: 15px;
-	letter-spacing: 2px;
-	color: hsl(192, 30%, 25%);
+	margin-top: 0px;
+}
+
+.contato {
+	color: hsl(200, 10%, 25%);
+	font-family: 'Roboto Mono';
+	font-weight: 100;
 	font-size: 14px;
-	text-transform: uppercase;
+	letter-spacing: 1px;
+	float: right;
+	margin-left: 10px;
+	margin-right: 10%;
+	margin-bottom: 20px;
+}
+
+.sobre {
+	color: hsl(200, 10%, 25%);
+	font-family: 'Roboto Mono';
+	font-weight: 100;
+	font-size: 14px;
+	letter-spacing: 2px;
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 20px;
 }
 
 h3 {
-	font-family: 'Cousine', Courier;
+	font-family: 'Roboto Mono', monospace;
 	letter-spacing: 1px;
 	font-size: 14px;
-	line-height: 24px;
+	line-height: 20px;
 	font-weight: 100;
-	color: hsl(192, 38%, 20%);
-	padding-left: 220px;
-	padding-right: 220px;
+	color: hsl(200, 10%, 25%);
+	margin-top: 0px;
+	margin-right: 20px;
+	/* margin-left: 20px; */
 }
 
-/* .description {
-	width: 440px;
-} */
+.title {
 
-@media only screen and (max-width: 600px) {
-	h1 {
-		font-size: 36px;
-		line-height: 52px;
-		margin-top: 30px;
-		margin-bottom: 50px;
+}
+
+.description {
+	max-width: 380px;
+	display: inline-block;
+	position: relative;
+	padding-left: 10%;
+}
+
+@media only screen and (max-width: 410px) {
+
+	h3 {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	.contato {
+		float: left;
+		margin-left: 10%;
+		margin-right: 10px;
+	}
+	.sobre{
+		float: left;
+		margin-left: 0px;
 	}
 
-	h2 {
-		font-family: 'Cousine';
-		line-height: 20px;
-		/* margin-right: 90px; */
-		padding-left: 50px;
-		padding-right: 50px;
-		margin-bottom: 20px;
 	}
-
-	h3{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-}
-
-
-
-h4 {
-	font-size: 16px;
-	font-size: 1rem;
-}
-
-h5 {
-	font-size: 12px;
-	font-size: 0.75rem;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-}
-
-h6 {
-	font-size: 12px;
-	font-size: 0.75rem;
-	font-weight: normal;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-}
-/* Copy */
-
 
 
 
 p {
-	margin: 0 0 1.5em;
-	color: hsla(0, 0%, 30%, 1);;
-	font-size: 18px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-family: 'Cousine';
+	color: hsl(192, 25%, 35%);
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 22px;
+	font-family: Helvetica;
 	font-weight: 100;
+	padding-left: 16px;
+	padding-top: 10px;
 }
 
 
-.alignleft {
-	color: hsl(192, 38%, 40%);
-	font-family: 'Cousine';
-	font-weight: 100;
-	font-size: 12px;
-	letter-spacing: 2px;
-	float: left;
-	margin-top: 42px;
-	margin-left: 42px;
-}
 
-.alignright {
-	color: hsl(192, 38%, 40%);
-	font-family: 'Cousine';
-	font-weight: 100;
-	font-size: 12px;
-	letter-spacing: 2px;
-	float: right;
-	margin-top: 42px;
-	margin-right: 42px;
-}
 
 .col-group > div {
-  padding: 1em 1em 0;
+  padding: 3em 1em 0;
 }
 
 @media screen and (min-width: 50em) {
@@ -188,9 +163,32 @@ p {
   }
   .col-group > div {
     float: left;
-    width: 33.3333333%;
+    width: 30%;
+		height: auto;
   }
 }
+
+#img-home {
+	width: 100%;
+	height: auto;
+}
+
+#img-home-2 {
+	width: 60%;
+	height: auto;
+	position: relative;
+	top: -6em;
+	left: 1em;
+}
+
+#img-home-3 {
+	width: 45%;
+	height: auto;
+	position: relative;
+	top: -28em;
+	left: 14em;
+}
+
 
 /* Links */
 
@@ -203,7 +201,8 @@ a {
 
 a:hover {
 	outline: none;
-	border-bottom: 3px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	color: hsl(200, 10%, 35%);
 }
 
 .site {
@@ -212,71 +211,17 @@ a:hover {
 	margin-left: auto;
 }
 
-.wrap,
-.site-content {
-	max-width: 100%;
-	margin-top: 5vw;
-}
 
 .content-area {
 	width: 100%;
 }
 
 .site-header {
-	margin-bottom: 1.5em;
-	padding-bottom: 12vh;
-	padding-top: 200px;
-	text-align: center;
+	padding-bottom: 15vw;
+	padding-top: 14vw;
 }
 
 .site-branding {
 	display: inline-block;
-	max-width: 960px;
-	line-height: 0;
-	text-align: center;
-}
-
-a.site-logo-link {
-	display: inline-block;
-	height: 3em;
-	margin: 0.75em 0;
-}
-
-a.site-logo-link img {
-	display: inline-block;
-	width: auto;
-	max-width: 100%;
-	height: auto;
-	max-height: 3em;
-	margin: 0;
-	vertical-align: middle;
-}
-
-a.site-logo-link:before {
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-	content: '';
-}
-
-.site-title {
-	margin-bottom: 0;
-	padding: 1em 0;
-}
-
-.site-title a {
-	color: #585858;
-}
-
-.site-description {
-	margin-top: -24px;
-	margin-bottom: 1em;
-	padding-top: 0;
-	color: #bebebe;
-	font-size: 12px;
-	font-size: 0.75rem;
-	font-weight: normal;
-	line-height: 1.5;
-	letter-spacing: normal;
-	text-transform: none;
-}
+	width: 200px;
+	padding-left: 10%;
