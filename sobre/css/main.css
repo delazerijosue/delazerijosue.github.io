@@ -55,17 +55,17 @@ body {
 }
 
 h1 {
-	font-family: 'Oswald';
-	font-size: 20px;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	line-height: 28px;
-	color: hsl(200, 5%, 30%);
-	margin-top: 0px;
-	margin-left: 10%;
-	width: 200px;
-	float: left;
+	font-family: 'Oswald' !important; 
+	font-size: 20px !important;
+	font-weight: bold !important;
+	text-transform: uppercase !important;
+	letter-spacing: 3px !important;
+	line-height: 28px !important;
+	color: hsl(200, 5%, 30%) !important;
+	margin-top: 0px !important;
+	margin-left: 10% !important;
+	width: 200px !important;
+	float: left !important;
 }
 
 .work-exp {
