@@ -88,7 +88,7 @@ h1 {
 .sobre {
 
 	outline: none;
-	border-bottom: 1px solid currentColor;
+	border-bottom: 2px solid currentColor;
 	color: hsl(200, 5%, 35%);
 	font-family: 'Roboto Mono';
 	font-weight: 100;
