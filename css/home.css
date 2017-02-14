@@ -10,15 +10,6 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif:400italic,400,700italic,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 
-html {
-	box-sizing: border-box;
-	font-family: Helvetica, ;
-	font-size: 16px;
-
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
-}
 
 body {
 	background: hsl(200, 5%, 5%);
@@ -40,20 +31,6 @@ body {
 	position: absolute;
 }
 
-
-.post-1 {
-	margin: 100px;
-}
-
-.trabalhos {
-	margin-bottom: 70px;
-}
-
-.icons {
-	margin-top: 15vh;
-	opacity: 0.3;
-}
-
 h1 {
 	font-family: 'Oswald';
 	font-size: 20px;
@@ -63,7 +40,6 @@ h1 {
 	line-height: 28px;
 	color: hsl(200, 5%, 30%);
 	margin-top: 0px;
-	margin-left: 10%;
 	width: 200px;
 	float: left;
 }
@@ -73,20 +49,7 @@ h1 {
 	margin-top: 0px;
 }
 
-.contato {
-	color: hsl(200, 5%, 25%);
-	font-family: 'Roboto Mono';
-	font-weight: 100;
-	font-size: 14px;
-	letter-spacing: 1px;
-	float: right;
-	margin-left: 10px;
-
-	margin-bottom: 20px;
-}
-
 .sobre {
-
 	outline: none;
 	border-bottom: 1px solid currentColor;
 	font-family: 'Roboto Mono';
@@ -94,10 +57,7 @@ h1 {
 	font-size: 14px;
 	letter-spacing: 2px;
 	float: right;
-	margin-left: 10px;
-	margin-right: 10%;
-	margin-bottom: 20px;
-}
+	margin-bottom: 20px;}
 
 h3 {
 	font-family: 'Roboto Mono', monospace;
@@ -108,11 +68,6 @@ h3 {
 	color: hsl(200, 5%, 25%);
 	margin-top: 0px;
 	margin-right: 20px;
-	/* margin-left: 20px; */
-}
-
-.title {
-
 }
 
 .description {
@@ -122,28 +77,46 @@ h3 {
 	padding-left: 10%;
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 1224px) {
+	.description {
+		padding-left: 0px;
+	}
+
+	.links-footer {
+		padding-left: 0px !important;
+	}
+
+	.info {
+		float: left !important;
+	}
+}
+
+@media only screen and (max-width: 430px) {
 
 	h3 {
 		font-size: 14px;
-		margin-top: 10px;
+		margin-top: 40px;
 	}
-	.contato {
-		float: left;
-		margin-left: 10%;
-		margin-right: 10px;
-	}
+
 	.sobre{
 		float: left;
-		margin-left: 0px;
-	}
-	.description{
-		max-width: 200px;
+		margin-right:80px;
+		margin-bottom: 40px;
 	}
 
+	.links-footer {
+		width: 200px;
+		margin-top: 20px;
 	}
 
+	.info {
+		margin-top:20px;
+		margin-bottom: 60px;
+		float:left;
+		max-width:20px;
 
+	}
+}
 
 p {
 	color: hsl(200, 5%, 20%);
@@ -153,9 +126,6 @@ p {
 	font-family: 'Roboto Mono';
 	font-weight: 100;
 }
-
-
-
 
 .col-group > div {
   padding: 3em 1em 0;
@@ -176,25 +146,6 @@ p {
 	width: 100%;
 	height: auto;
 }
-
-#img-home-2 {
-	width: 60%;
-	height: auto;
-	position: relative;
-	top: -6em;
-	left: 1em;
-}
-
-#img-home-3 {
-	width: 45%;
-	height: auto;
-	position: relative;
-	top: -28em;
-	left: 14em;
-}
-
-
-/* Links */
 
 a {
 	color: hsl(200, 5%, 20%);
@@ -217,25 +168,24 @@ a {
 .contato-footer {
 	margin-top: -20px;
 	width: 200px;
-	margin-left: 10%;
 	float: left;
 }
 
-.email {
-	margin-left: 10%;
+.links-footer {
+	padding-left: 10%;
 	float: left;
+	padding-right: 40px;
 }
 
 .twitter {
-	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 40px;
 	float: left;
 }
 
 .info {
-	margin-left: 20px;
-	margin-right: 10%;
 	float: right;
-	width: 400px;
+	max-width: 300px;
 }
 
 .p-info {
@@ -256,25 +206,16 @@ a:hover {
 	margin-left: auto;
 }
 
-
-.content-area {
-	width: 100%;
-}
-
 .site-header {
+	margin-left: 10%;
+	margin-right: 10%;
 	padding-bottom: 15vw;
 	padding-top: 14vw;
 }
 
-
-.site-branding {
-	display: inline-block;
-	width: 200px;
-	padding-left: 10%;
-}
-
-
 .site-footer {
-	padding-bottom: 120px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 180px;
 	padding-top: 18vw;
 }
