@@ -1,1 +1,1 @@
-# delazerijosue.github.com
+# delazerijosue.github.io
