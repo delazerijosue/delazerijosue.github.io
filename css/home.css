@@ -206,6 +206,12 @@ p {
   padding: 3em 1em 0;
 }
 
+
+.col-group > div:nth-child(1) img {
+	transform: translateY(200px);
+}
+
+
 @media screen and (min-width: 50em) {
   .col-group {
     overflow: hidden;
@@ -271,6 +277,8 @@ a {
 	float: right;
 	max-width: 300px;
 }
+
+
 
 .p-info {
 	margin-top: 0px;
