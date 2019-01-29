@@ -207,7 +207,7 @@ p {
 }
 
 
-.col-group > div:nth-child(1) {
+.col-group > div:nth-child(1) img {
 	transform: translateY(200px);
 }
 
