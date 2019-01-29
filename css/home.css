@@ -214,7 +214,7 @@ p {
 
 @media screen and (min-width: 50em) {
   .col-group {
-    
+  overflow: -webkit-paged-y;
   }
   .col-group > div {
     float: left;
@@ -302,7 +302,7 @@ a:hover {
 .site-header {
 	margin-left: 10%;
 	margin-right: 10%;
-	padding-bottom: 35vh;
+	padding-bottom: 25vh;
 	padding-top: 35vh;
 }
 
@@ -310,5 +310,5 @@ a:hover {
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 240px;
-	padding-top: 40vh;
+	padding-top: 200px;
 }
