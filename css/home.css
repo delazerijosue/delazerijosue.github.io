@@ -69,7 +69,7 @@ h1 {
 	/* text-transform: uppercase; */
 	letter-spacing: 1px;
 	line-height: 28px;
-	color: hsla(195, 2%, 70%, 1);
+	color: hsla(200, 5%, 55%, 1);
 	margin-top: 0px;
 	width: 180px;
 	float: left;
@@ -91,6 +91,8 @@ h1 {
 	letter-spacing: 4px;
 	float: right;
 	margin-bottom: 20px;
+	padding-left: 2px;
+	padding-right: 0px;
 	}
 
 h3 {
@@ -99,7 +101,7 @@ h3 {
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 100;
-	color: hsla(195, 5%, 25%, 1);
+	color: hsla(202, 5%, 70%, 1);
 	margin-top: 0px;
 	margin-right: 20px;
 }
