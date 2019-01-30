@@ -18,16 +18,16 @@ body {
 
 #post-title {
 	font-family: 'Rubik';
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: 200;
-	color: hsl(195, 0%, 65%);
-	letter-spacing: 2px;
+	color: hsla(0, 0%, 70%, 1);
+	/* letter-spacing: 2px; */
 	font-size: 14px;
-	padding: 15px 20px 15px 20px;
+	padding: 36px 0px 0px 0px;
 	/* bottom: 22px; */
 	margin-top: -34px;
 	margin-left: 20px;
-	background-color: hsla(200, 5%, 12%, 1);
+	/* background-color: hsla(200, 5%, 12%, 1); */
 	position: absolute;
 	line-height: 1.5em;
 }
@@ -207,14 +207,18 @@ p {
 }
 
 
-.col-group > div:nth-child(1) img {
-	transform: translateY(200px);
+.col-group > div:nth-child(1)  {
+	transform: translateY(160px);
+}
+
+.col-group > div:nth-child(3)  {
+	transform: translateY(80px);
 }
 
 
 @media screen and (min-width: 50em) {
   .col-group {
-    overflow: hidden;
+  overflow: -webkit-paged-y;
   }
   .col-group > div {
     float: left;
@@ -302,13 +306,13 @@ a:hover {
 .site-header {
 	margin-left: 10%;
 	margin-right: 10%;
-	padding-bottom: 35vh;
-	padding-top: 35vh;
+	padding-bottom: 29vh;
+	padding-top: 30vh;
 }
 
 .site-footer {
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 240px;
-	padding-top: 40vh;
+	padding-top: 200px;
 }
