@@ -23,14 +23,24 @@ body {
 	color: hsla(0, 0%, 70%, 1);
 	/* letter-spacing: 2px; */
 	font-size: 14px;
-	padding: 36px 0px 0px 0px;
+	/* padding: 36px 0px 0px 0px; */
 	/* bottom: 22px; */
-	margin-top: -34px;
-	margin-left: 20px;
+	/* margin-top: -34px; */
+	/* margin-left: 20px; */
 	/* background-color: hsla(200, 5%, 12%, 1); */
 	position: absolute;
 	line-height: 1.5em;
 }
+
+#post-title-inside {
+	font-family: 'Rubik';
+	font-weight: 700;
+	color: hsla(0, 0%, 70%, 1);
+	font-size: 14px;
+	position: absolute;
+	line-height: 1.5em;
+}
+
 
 .post-sub-title {
 	font-family: 'Rubik';
@@ -203,12 +213,12 @@ p {
 }
 
 .col-group > div {
-  padding: 3em 1em 0;
+  padding: 0em 1em 0;
 }
 
 
 .col-group > div:nth-child(1)  {
-	transform: translateY(160px);
+	/* transform: translateY(160px); */
 }
 
 .col-group > div:nth-child(3)  {
