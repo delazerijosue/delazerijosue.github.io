@@ -30,12 +30,13 @@ body {
 	/* background-color: hsla(200, 5%, 12%, 1); */
 	position: absolute;
 	line-height: 1.5em;
+	margin-bottom: 6px;
 }
 
 #post-title-inside {
 	font-family: 'Rubik';
 	font-weight: 400;
-	color: hsla(0, 0%, 70%, 1);
+	color: hsla(0, 0%, 80%, 1);
 	font-size: 14px;
 	position: absolute;
 	line-height: 1.5em;
@@ -222,7 +223,7 @@ p {
 }
 
 .col-group > div:nth-child(3)  {
-	transform: translateY(80px);
+	transform: translateY(0px);
 }
 
 
@@ -234,6 +235,7 @@ p {
     float: left;
     width: 30%;
     height: auto;
+		margin-bottom: 96px;
   }
 }
 
@@ -323,6 +325,6 @@ a:hover {
 .site-footer {
 	margin-left: 10%;
 	margin-right: 10%;
-	padding-bottom: 240px;
-	padding-top: 200px;
+	padding-bottom: 200px;
+	padding-top: 300px;
 }
