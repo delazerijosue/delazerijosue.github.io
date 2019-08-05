@@ -43,6 +43,11 @@ body {
 	line-height: 1.5em;
 }
 
+.col-group:before {
+    content: '';
+    display: block;
+    clear: both;
+}
 
 .post-sub-title {
 	font-family: 'Rubik';
