@@ -29,15 +29,16 @@ body {
 	/* margin-left: 20px; */
 	/* background-color: hsla(200, 5%, 12%, 1); */
 	position: absolute;
-	line-height: 1.5em;
+	line-height: 1.2em;
 	margin-bottom: 6px;
 }
 
 #post-title-inside {
+	margin-top: 0px;
 	font-family: 'Rubik';
 	font-weight: 400;
 	color: hsla(0, 0%, 80%, 1);
-	font-size: 14px;
+	font-size: 24px;
 	position: absolute;
 	line-height: 1.5em;
 }
@@ -179,6 +180,15 @@ p {
 	font-weight: 100;
 }
 
+
+.content {
+	margin-bottom: 200px;
+}
+
+#page > div.content > div:nth-child(5){
+	margin-bottom: 100px;
+}
+
 .three-col {
 
   display: flex;
@@ -194,7 +204,7 @@ p {
 }
 
 .two-col {
-  display: flex;
+  display: inline-flex;
   max-width: 1460px;
   margin-right: 20px;
 	margin-top: 16px;
