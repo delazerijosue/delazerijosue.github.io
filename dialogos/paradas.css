@@ -1,5 +1,12 @@
 .site-header {
-	
+
 	padding-bottom: 15vw;
 	padding-top: 5vw;
+}
+
+.inner-post-title {
+	font-size: 20px;
+	font-family: 'Rubik';
+	font-weight: 400;
+	color: hsla(0, 0%, 80%, 1);
 }

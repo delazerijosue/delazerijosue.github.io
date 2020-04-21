@@ -33,14 +33,15 @@ body {
 	margin-bottom: 6px;
 }
 
-#post-title-inside {
-	margin-top: 0px;
+.col-group .post-title-inside {
+	padding-top: 30px;
+	margin-top: 16px;
 	font-family: 'Rubik';
 	font-weight: 400;
-	color: hsla(0, 0%, 80%, 1);
-	font-size: 24px;
+	color: hsla(0, 0%, 10%, 1);
+	font-size: 20px;
 	position: absolute;
-	line-height: 1.5em;
+	line-height: 1.4em;
 }
 
 .col-group:before {
@@ -75,9 +76,7 @@ dt {
 	margin-bottom: 60px;
 }
 
-#col-group {
-	position: relative;
-}
+
 
 h1 {
 	font-family: 'Rubik';
@@ -260,8 +259,8 @@ p {
 }
 
 .text-intro {
-	padding-top: 0px !important;
-  padding-bottom: 80px !important;
+	padding-top: 30px !important;
+  
 }
 
 a {
@@ -275,6 +274,24 @@ a {
 	border-bottom: 1px solid currentColor;
 	text-decoration: none;
 	text-align: left;
+}
+
+a .work-exp {
+	font-weight: 100;
+	margin-top: 0px;
+	color: hsla(0, 0%, 50%, 1);
+}
+
+a .work-exp:hover {
+	outline: none;
+	border-bottom: 2px solid currentColor;
+	color: hsla(0, 0%, 80%, 1);
+}
+
+a:hover {
+	outline: none;
+	border-bottom: 2px solid currentColor;
+	color: hsl(200, 5%, 60%);
 }
 
 .fa {
@@ -318,11 +335,7 @@ a {
 	line-height: 14px;
 }
 
-a:hover {
-	outline: none;
-	border-bottom: 2px solid currentColor;
-	color: hsl(200, 5%, 60%);
-}
+
 
 .site {
 	max-width: 1460px;
