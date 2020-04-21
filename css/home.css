@@ -40,8 +40,8 @@ body {
 	font-weight: 400;
 	color: hsla(0, 0%, 10%, 1);
 	font-size: 20px;
-	position: absolute;
 	line-height: 1.4em;
+	width: 100%;
 }
 
 .col-group:before {
@@ -85,9 +85,9 @@ h1 {
 	/* text-transform: uppercase; */
 	letter-spacing: 1px;
 	line-height: 28px;
-	color: hsla(200, 5%, 55%, 1);
+	color: hsla(200, 5%, 40%, 1);
 	margin-top: 0px;
-	width: 180px;
+
 	float: left;
 }
 
@@ -98,7 +98,7 @@ h1 {
 
 .sobre {
 	outline: none;
-	color: hsl(195, 5%, 25%);
+	color: hsl(195, 5%, 70%);
 	border-bottom: 1px solid currentColor;
 	font-family: 'Rubik';
 	font-weight: 100;
@@ -144,6 +144,13 @@ h3 {
 }
 
 @media only screen and (max-width: 430px) {
+
+
+
+	.site-header {
+    padding-bottom: 20vh !important;
+    padding-top: 15vh !important;
+	}
 
 	h3 {
 		font-size: 14px;
@@ -224,7 +231,15 @@ p {
 
 .one-col {
 	margin-top: 10px;
+	margin-bottom: 80px;
 	max-width: 100%;
+
+}
+
+.one-col-inside {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .col-group > div {
@@ -260,7 +275,7 @@ p {
 
 .text-intro {
 	padding-top: 30px !important;
-  
+
 }
 
 a {
