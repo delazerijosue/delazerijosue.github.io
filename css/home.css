@@ -91,6 +91,14 @@ h1 {
 	float: left;
 }
 
+.inner-post-title {
+	font-size: 20px;
+	font-family: 'Rubik';
+	font-weight: 400;
+	color: hsla(0, 0%, 80%, 1);
+}
+
+
 .work-exp {
 	font-weight: 100;
 	margin-top: 0px;
