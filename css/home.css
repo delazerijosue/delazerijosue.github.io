@@ -20,14 +20,10 @@ body {
 	font-family: 'Rubik';
 	/* text-transform: uppercase; */
 	font-weight: 200;
-	color: hsla(0, 0%, 70%, 1);
-	/* letter-spacing: 2px; */
+	color: hsla(0, 0%, 77%, 1);
 	font-size: 14px;
-	/* padding: 36px 0px 0px 0px; */
+	padding: 24px 0px 0px 0px;
 	/* bottom: 22px; */
-	/* margin-top: -34px; */
-	/* margin-left: 20px; */
-	/* background-color: hsla(200, 5%, 12%, 1); */
 	position: absolute;
 	line-height: 1.2em;
 	margin-bottom: 6px;
@@ -201,7 +197,7 @@ p {
 
 
 .content {
-	margin-bottom: 200px;
+	display: inline-block;
 }
 
 #page > div.content > div:nth-child(5){
@@ -238,7 +234,7 @@ p {
 }
 
 .one-col {
-	margin-top: 10px;
+	margin-top: 60px;
 	margin-bottom: 80px;
 	max-width: 100%;
 
@@ -377,5 +373,5 @@ a:hover {
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 200px;
-	padding-top: 300px;
+	padding-top: 35vh;
 }
