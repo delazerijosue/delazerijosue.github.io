@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuição de Granulados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .controls {
+            width: 300px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        .controls label {
+            display: block;
+            margin-top: 10px;
+        }
+        .controls input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .controls input[type="number"] {
+            width: 60px;
+            margin-left: 10px;
+        }
+        .controls select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .controls button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+        .canvas-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        canvas {
+            background-color: white;
+            border: 2px solid #000;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .color-control {
+            margin-bottom: 10px;
+        }
+        .color-control button {
+            width: auto;
+            padding: 5px 10px;
+            margin: 5px 0;
+            background-color: #dc3545;
+        }
+        .color-control button.add-color {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button onclick="generateGranules()">Gerar Granulados</button>
+        <button onclick="clearCanvas()">Limpar Canvas</button>
+        <button onclick="exportSVG()">Exportar SVG</button>
+        <hr>
+        <label>Dimensão do Canvas:</label>
+        <div>
+            <input type="number" id="canvasWidth" value="800" min="100" readonly>
+            x
+            <input type="number" id="canvasHeight" value="800" min="100" readonly>
+        </div>
+        <hr>
+        <label>Cor do Fundo:</label>
+        <select id="bgColor" onchange="generateGranules()">
+            <option value="#F9F3E1">Creme</option>
+            <option value="#E9570E">Laranja</option>
+            <option value="#9ED8F4">Azul</option>
+            <option value="#3E2612">Chocolate</option>
+        </select>
+        <hr>
+        <label>Densidade:</label>
+        <div>
+            <input type="range" id="densitySlider" min="10" max="1000" value="600" oninput="updateDensity()">
+            <input type="number" id="density" value="600" min="10" oninput="updateDensitySlider()">
+        </div>
+        <hr>
+        <label>Espaçamento Entre Granulados:</label>
+        <div>
+            <input type="range" id="spacingSlider" min="0" max="100" value="30" oninput="updateSpacing()">
+            <input type="number" id="spacing" value="30" min="0" oninput="updateSpacingSlider()">
+        </div>
+        <hr>
+        <label>Cores dos Granulados:</label>
+        <div id="colorControls">
+            <!-- Controles de cores serão adicionados dinamicamente aqui -->
+        </div>
+        <button class="add-color" onclick="addColorControl()">Adicionar Cor</button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="granuleCanvas"></canvas>
+    </div>
+    <script>
+        let granules = [];
+        let colorControls = [];
+
+        // Valores padrão ao carregar a página
+        window.onload = () => {
+            document.getElementById("bgColor").value = "#F9F3E1"; // Cor do fundo: Creme
+            document.getElementById("density").value = 600; // Densidade: 600
+            document.getElementById("densitySlider").value = 600;
+            document.getElementById("spacing").value = 30; // Espaçamento: 30
+            document.getElementById("spacingSlider").value = 30;
+
+            // Adiciona uma cor inicial (Chocolate)
+            addColorControl("#3E2612", 100);
+            generateGranules();
+        };
+
+        // Funções para sincronizar sliders e campos de texto
+        function updateDensity() {
+            document.getElementById("density").value = document.getElementById("densitySlider").value;
+            generateGranules();
+        }
+        function updateDensitySlider() {
+            document.getElementById("densitySlider").value = document.getElementById("density").value;
+            generateGranules();
+        }
+        function updateSpacing() {
+            document.getElementById("spacing").value = document.getElementById("spacingSlider").value;
+            generateGranules();
+        }
+        function updateSpacingSlider() {
+            document.getElementById("spacingSlider").value = document.getElementById("spacing").value;
+            generateGranules();
+        }
+
+        // Função para adicionar um controle de cor
+        function addColorControl(color = "#3E2612", ratio = 100) {
+            const colorControlsContainer = document.getElementById("colorControls");
+            const colorControl = document.createElement("div");
+            colorControl.className = "color-control";
+            colorControl.innerHTML = `
+                <select onchange="generateGranules()">
+                    <option value="#F9F3E1">Creme</option>
+                    <option value="#E9570E">Laranja</option>
+                    <option value="#9ED8F4">Azul</option>
+                    <option value="#3E2612" selected>Chocolate</option>
+                </select>
+                <input type="range" min="0" max="100" value="${ratio}" oninput="updateColorRatio(this)">
+                <input type="number" min="0" max="100" value="${ratio}" oninput="updateColorRatio(this)">%
+                <button onclick="removeColorControl(this)">Remover</button>
+            `;
+            colorControlsContainer.appendChild(colorControl);
+            colorControls.push(colorControl);
+            generateGranules();
+        }
+
+        // Função para remover um controle de cor
+        function removeColorControl(button) {
+            if (colorControls.length > 1) {
+                const colorControl = button.parentElement;
+                colorControl.remove();
+                colorControls = colorControls.filter(control => control !== colorControl);
+                generateGranules();
+            } else {
+                alert("É necessário ter pelo menos uma cor.");
+            }
+        }
+
+        // Função para atualizar a proporção de uma cor
+        function updateColorRatio(input) {
+            const parent = input.parentElement;
+            const range = parent.querySelector('input[type="range"]');
+            const number = parent.querySelector('input[type="number"]');
+            if (input === range) {
+                number.value = range.value;
+            } else {
+                range.value = number.value;
+            }
+            generateGranules();
+        }
+
+        // Função principal para gerar os granulados
+        function generateGranules() {
+            const canvas = document.getElementById("granuleCanvas");
+            const ctx = canvas.getContext("2d");
+            const width = parseInt(document.getElementById("canvasWidth").value);
+            const height = parseInt(document.getElementById("canvasHeight").value);
+            const bgColor = document.getElementById("bgColor").value;
+            const density = parseInt(document.getElementById("density").value);
+            const spacing = parseInt(document.getElementById("spacing").value);
+
+            // Obtém as cores e proporções dos controles
+            const colorControls = document.querySelectorAll(".color-control");
+            const colors = [];
+            colorControls.forEach(control => {
+                const color = control.querySelector("select").value;
+                const ratio = parseInt(control.querySelector('input[type="number"]').value);
+                colors.push({ color, ratio });
+            });
+
+            // Ajusta o tamanho do canvas para caber na tela, se necessário
+            const maxWidth = window.innerWidth - 320; // 300px dos controles + 20px de padding
+            const maxHeight = window.innerHeight - 40; // 20px de padding
+            const scale = Math.min(maxWidth / width, maxHeight / height, 1); // Limita ao tamanho real ou menor
+            canvas.width = width * scale;
+            canvas.height = height * scale;
+
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            granules = [];
+            for (let i = 0; i < density; i++) {
+                let x, y, isValidPosition;
+                let attempts = 0;
+                do {
+                    x = Math.random() * canvas.width;
+                    y = Math.random() * canvas.height;
+                    isValidPosition = true;
+                    for (let granule of granules) {
+                        let dx = x - granule.x;
+                        let dy = y - granule.y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < spacing * scale) {
+                            isValidPosition = false;
+                            break;
+                        }
+                    }
+                    attempts++;
+                } while (!isValidPosition && attempts < 100);
+
+                if (!isValidPosition) continue;
+
+                let length = (10 + Math.random() * 10) * scale;
+                let thickness = 3 * scale;
+                let angle = Math.random() * Math.PI * 2;
+                let curve = (Math.random() - 0.5) * 10 * scale;
+
+                // Escolhe a cor com base nas proporções
+                let colorChoice = Math.random() * 100;
+                let totalRatio = 0;
+                let color;
+                for (let { color: col, ratio } of colors) {
+                    totalRatio += ratio;
+                    if (colorChoice < totalRatio) {
+                        color = col;
+                        break;
+                    }
+                }
+
+                granules.push({ x, y, length, thickness, angle, curve, color });
+                ctx.strokeStyle = color;
+                ctx.lineWidth = thickness;
+                ctx.lineCap = "round";
+                ctx.beginPath();
+                ctx.moveTo(x - Math.cos(angle) * length / 2, y - Math.sin(angle) * length / 2);
+                ctx.quadraticCurveTo(x + curve, y + curve, x + Math.cos(angle) * length / 2, y + Math.sin(angle) * length / 2);
+                ctx.stroke();
+            }
+        }
+
+        function clearCanvas() {
+            const canvas = document.getElementById("granuleCanvas");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            granules = [];
+        }
+
+        function exportSVG() {
+            const width = parseInt(document.getElementById("canvasWidth").value);
+            const height = parseInt(document.getElementById("canvasHeight").value);
+            let svgContent = `<svg xmlns='http://www.w3.org/2000/svg' width='${width}' height='${height}'>`;
+            svgContent += `<rect width='100%' height='100%' fill='${document.getElementById("bgColor").value}'/>`;
+
+            granules.forEach(granule => {
+                let x1 = granule.x - Math.cos(granule.angle) * granule.length / 2;
+                let y1 = granule.y - Math.sin(granule.angle) * granule.length / 2;
+                let x2 = granule.x + Math.cos(granule.angle) * granule.length / 2;
+                let y2 = granule.y + Math.sin(granule.angle) * granule.length / 2;
+                let cx = granule.x + granule.curve;
+                let cy = granule.y + granule.curve;
+
+                svgContent += `<path d='M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}' stroke='${granule.color}' stroke-width='${granule.thickness}' stroke-linecap='round' fill='none'/>`;
+            });
+
+            svgContent += `</svg>`;
+
+            const blob = new Blob([svgContent], { type: "image/svg+xml" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "granulados.svg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Redimensiona o canvas ao ajustar a janela
+        window.addEventListener("resize", generateGranules);
+    </script>
+</body>
+</html>
